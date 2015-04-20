@@ -42,9 +42,14 @@ class RabbitMqServiceProvider extends RabbitServiceProvider
 
             $console->addCommands([
                 new Command\SetupFabricCommand(),
-                new Command\DeleteQueues(),
                 new \fiunchinho\Silex\Command\Consumer(),
             ]);
+
+            if (class_exists('Guzzle\Http\Client')) {
+                $console->addCommands([
+                    new Command\DeleteQueues(),
+                ]);
+            }
         });
     }
 
