@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3119e9425ea732ff663cb027e63f52c4",
+    "hash": "a1dc6c3847a9ffaa11264477d3b65212",
     "packages": [
         {
             "name": "fiunchinho/rabbitmq-service-provider",
@@ -1879,14 +1879,7 @@
             "time": "2015-02-24 06:35:25"
         }
     ],
-    "aliases": [
-        {
-            "alias": "1.6.1",
-            "alias_normalized": "1.6.1.0",
-            "version": "9999999-dev",
-            "package": "oldsound/rabbitmq-bundle"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "oldsound/rabbitmq-bundle": 20

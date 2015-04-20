@@ -9,7 +9,7 @@
         "silex/silex": "~1.2",
         "knplabs/console-service-provider": "~1.0.0",
         "fiunchinho/rabbitmq-service-provider": "~1.0.1",
-        "oldsound/rabbitmq-bundle": "~1.5.1 || ~1.6.1"
+        "oldsound/rabbitmq-bundle": "~1.5.0 || ~1.6.0@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.6.0"
