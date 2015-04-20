@@ -1,6 +1,6 @@
 {
     "name": "easybib/rabbitmq-service-provider",
-    "description": "Silex Service Provider for RabbitMQ with Symfony Event forwarding"
+    "description": "Silex Service Provider for RabbitMQ with Symfony Event forwarding",
     "keywords": ["amqp", "RabbitMQ", "silex", "service-provider"],
     "homepage": "http://github.com/easybiblabs/rabbitmq-service-provider",
     "require": {
