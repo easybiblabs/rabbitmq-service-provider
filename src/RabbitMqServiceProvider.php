@@ -26,16 +26,11 @@ class RabbitMqServiceProvider extends RabbitServiceProvider
     {
         parent::register($app);
 
-        if ($app['rabbit.forward.events']) {
-            $app['rabbit.subscriber'] = $app->share(function ($app) {
-                return new EventForwardSubscriber(
-                    $app['rabbit.forward.events'],
-                    LazyProducer::init($app, $app['rabbit.forward.producer'])
-                );
-            });
-
-            $app['dispatcher']->addSubscriber($app['rabbit.subscriber']);
-        }
+        $app['rabbit.listener'] = $app->share(function ($app) {
+            return new EventForwardListener(
+                LazyProducer::init($app, isset($app['rabbit.forward.producer']) ? $app['rabbit.forward.producer'] : null)
+            );
+        });
 
         $app['dispatcher']->addListener(ConsoleEvents::INIT, function (ConsoleEvent $event) {
             $console = $event->getApplication();
@@ -56,5 +51,11 @@ class RabbitMqServiceProvider extends RabbitServiceProvider
     public function boot(Application $app)
     {
         parent::boot($app);
+
+        if (isset($app['rabbit.forward.events'])) {
+            foreach ($app['rabbit.forward.events'] as $event) {
+                $app['dispatcher']->addListener($event, [$app['rabbit.listener'], 'onEvent']);
+            }
+        }
     }
 }

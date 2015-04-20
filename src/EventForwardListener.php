@@ -15,27 +15,15 @@
 namespace EasyBib\Silex\RabbitMq;
 
 use Symfony\Component\EventDispatcher\Event;
-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
-class EventForwardSubscriber implements EventSubscriberInterface
+class EventForwardListener
 {
-    protected $events;
+    static public $events;
     protected $producer;
 
-    public function __construct(array $events, LazyProducer $producer)
+    public function __construct(LazyProducer $producer)
     {
-        $this->events = $events;
         $this->producer = $producer;
-    }
-
-    public static function getSubscribedEvents()
-    {
-        $subscribe = [];
-        foreach ($this->events as $event) {
-            $subscribe[$event] = ['onEvent', 0];
-        }
-
-        return $subscribe;
     }
 
     public function onEvent(Event $event)
