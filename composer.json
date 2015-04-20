@@ -3,6 +3,7 @@
     "description": "Silex Service Provider for RabbitMQ with Symfony Event forwarding",
     "keywords": ["amqp", "RabbitMQ", "silex", "service-provider"],
     "homepage": "http://github.com/easybiblabs/rabbitmq-service-provider",
+    "license": "BSD-2-Clause",
     "require": {
         "php": ">=5.4.0",
         "silex/silex": "~1.2",
