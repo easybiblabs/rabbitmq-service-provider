@@ -13,6 +13,9 @@
     "conflict": {
         "oldsound/rabbitmq-bundle": "<=1.5.0 || >=1.6.0-dev,<=1.6.0"
     },
+    "suggest": {
+        "guzzle/guzzle": "To access administrative commands using the management API",
+    }
     "autoload": {
         "psr-4": { "EasyBib\\Silex\\RabbitMq\\": "src/" }
     }
