@@ -21,7 +21,7 @@ use Symfony\Component\EventDispatcher\Event;
 
 abstract class SerializableEvent extends Event implements \Serializable
 {
-    abstract function getProperties();
+    abstract protected function getProperties();
 
     public function serialize()
     {
