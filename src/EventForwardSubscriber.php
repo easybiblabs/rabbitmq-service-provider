@@ -14,7 +14,6 @@
 
 namespace EasyBib\Silex\RabbitMq;
 
-use InfoLit\Event\SerializableEvent;
 use Symfony\Component\EventDispatcher\Event;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
