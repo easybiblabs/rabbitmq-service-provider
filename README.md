@@ -13,7 +13,7 @@ with further functionality:
 In addition to the standard configuration you can specify a list of Symfony
 Event names in `rabbit.forward.events` which will be published on the producer
 with the name in `rabbit.forward.producer`. These events must inherit from
-`EasyBib\Silex\RabbitMq\SerializeableEvent`.
+`EasyBib\Silex\RabbitMq\SerializableEvent`.
 
 Example configuration
 
