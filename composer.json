@@ -14,6 +14,6 @@
         "oldsound/rabbitmq-bundle": "<=1.5.0 || >=1.6.0-dev,<=1.6.0"
     },
     "autoload": {
-        "psr-4": { "EasyBib\\Silex\\RabbitMQ\\": "src/" }
+        "psr-4": { "EasyBib\\Silex\\RabbitMq\\": "src/" }
     }
 }
