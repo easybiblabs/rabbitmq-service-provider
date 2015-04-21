@@ -18,7 +18,6 @@ use Symfony\Component\EventDispatcher\Event;
 
 class EventForwardListener
 {
-    static public $events;
     protected $producer;
 
     public function __construct(LazyProducer $producer)
