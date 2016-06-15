@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a1dc6c3847a9ffaa11264477d3b65212",
+    "hash": "429f780bb5ba1784e6643903586f75e2",
     "packages": [
         {
             "name": "fiunchinho/rabbitmq-service-provider",
